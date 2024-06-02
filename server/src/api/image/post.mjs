@@ -4,6 +4,7 @@
  */
 
 import runImage from "../../functions/stableAI.mjs";
+import db from "../../functions/firebase.mjs";
 /**
  *
  * @param {Request} req
