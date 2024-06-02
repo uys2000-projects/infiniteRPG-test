@@ -61,7 +61,7 @@ export default {
     async post() {
       try {
         this.messages.push(new Message("user", this.message))
-        const res = await post("http://127.0.0.1:5001/infinite-rpg-project-test/us-central1/app", "/chat", { id: this.id, message: this.message + "Answer to me with using your answer format and don't use anything like this <text>. Don't answer me if I say anything else except our game." });
+        const res = await post("https://us-central1-infinite-rpg-project-test.cloudfunctions.net/app", "/chat", { id: this.id, message: this.message + "Answer to me with using your answer format and don't use anything like this <text>. Don't answer me if I say anything else except our game." });
         this.message = "";
         this.messages.push(res.data.result)
       } catch {

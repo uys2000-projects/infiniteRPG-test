@@ -49,7 +49,7 @@ export default {
     },
     async getImage(keywords) {
       if (this.url) return;
-      const res = await post("http://127.0.0.1:5001/infinite-rpg-project-test/us-central1/app", "/image", { prompt: keywords });
+      const res = await post("https://us-central1-infinite-rpg-project-test.cloudfunctions.net/app", "/image", { prompt: keywords });
       this.url = `data:image/png;base64,${this.toBase64(res.data.result.data)}`
       console.log(this.url)
     },

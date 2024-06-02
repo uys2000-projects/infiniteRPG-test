@@ -10,7 +10,12 @@ import image from "../api/image.mjs";
 export default function (port) {
   const app = express();
 
-  app.use(cors());
+  app.use(
+    cors({
+      origin: "*",
+      optionsSuccessStatus: 200,
+    })
+  );
   app.use(parser.json());
   app.use(parser.urlencoded({ extended: true }));
 

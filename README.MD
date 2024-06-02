@@ -9,7 +9,7 @@ npm install -g firebase-tools
 
 ## SERVER
 
-(server currently runs on `http://127.0.0.1:5001/infinite-rpg-project-test/us-central1/app`)  
+(server currently runs on `https://us-central1-infinite-rpg-project-test.cloudfunctions.net/app`)  
 To run the server locally
 
 ```bash
@@ -31,4 +31,4 @@ yarn dev
 ```
 
 To connect web app to your local server on remote server urls in `app/src/App.vue` and `app/src/components/ChatBox.vue` should be changed with your own urls.  
-(target url is `http://127.0.0.1:5001/infinite-rpg-project-test/us-central1/app`)
+(target url is `https://us-central1-infinite-rpg-project-test.cloudfunctions.net/app`)
