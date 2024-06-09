@@ -1,7 +1,7 @@
 <template>
   <div style="text-align: left;">
     <div>
-      <div>
+      <div style="overflow: hidden;display: flex;">
         <input type="text" style="width: 100%; padding: 5px;" v-model="id">
       </div>
       <div>
@@ -14,7 +14,7 @@
       </template>
     </div>
     <div>
-      <div>
+      <div style="overflow: hidden;display: flex;">
         <input type="text" style="width: 100%; padding: 5px;" v-model="message" placeholder="Your answer">
       </div>
       <div>
