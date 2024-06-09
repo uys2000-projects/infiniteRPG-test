@@ -8,7 +8,6 @@ import fs from "node:fs";
  * @returns
  */
 export default async function runImage(prompt) {
-  console.log(prompt);
   const formData = {
     prompt: prompt.join(", "),
     output_format: "jpeg",
@@ -26,8 +25,5 @@ export default async function runImage(prompt) {
       },
     }
   );
-  console.log(`Bearer ${process.env.API_STABILITYAI}`);
-  console.log(response.status);
-  fs.writeFileSync("./lighthouse.jpeg", Buffer.from(response.data));
   return Buffer.from(response.data);
 }

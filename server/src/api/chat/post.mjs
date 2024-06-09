@@ -3,6 +3,7 @@
  * @typedef {import('express').Response} Response
  */
 
+import { log } from "firebase-functions/logger";
 import runChat, { Message } from "../../functions/chatgpt.mjs";
 import db from "../../functions/firebase.mjs";
 
@@ -27,7 +28,7 @@ export default async function (req, res) {
   // GET Data and return Data
   try {
     //get user id and message from body
-    console.log(`Request URL: ${req.baseUrl}`);
+    log(`Request URL: ${req.baseUrl}`);
     const id = req.body.id;
     const message = req.body.message;
     var api = await db.collection("-settings").doc("api").get();
@@ -63,7 +64,7 @@ export default async function (req, res) {
       });
     }
   } catch (err) {
-    console.log(err);
+    log(err);
   }
   // If can not GET data, return 500 - NotSuccess
   return res.status(500).send({ error: "error" });
