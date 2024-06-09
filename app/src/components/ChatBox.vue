@@ -1,6 +1,6 @@
 <template>
   <div style="border: 1px solid black;">
-    <table style="width: 100%;">
+    <table class="a" style="width: 100%;">
       <tr>
         <td style="text-transform: capitalize;">
           {{ message.role }}
